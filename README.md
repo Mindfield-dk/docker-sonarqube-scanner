@@ -7,11 +7,11 @@
 A `sonar-project.properties` (or it's equivalent in dynamic configuration) is required in the root of you project with as a minimum the following values:
 
 ```
-	sonar.projectKey=uniqueKey
-	sonar.projectName=Project Name
-	sonar.projectVersion=0.0.1
-	sonar.sources=.
-	sonar.projectDescription=Project Description
+sonar.projectKey=uniqueKey
+sonar.projectName=Project Name
+sonar.projectVersion=0.0.1
+sonar.sources=.
+sonar.projectDescription=Project Description
 ```
 
 ## Run
