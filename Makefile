@@ -21,10 +21,10 @@ pull:
 	docker pull ${IMAGE}
 
 run:
-	docker run --rm -v ${HOST_WORKSPACE}:${CONTAINER_WORKSPACE} ${IMAGE}
+	docker run --rm --user $(shell id -u):$(shell id -g) -w ${CONTAINER_WORKSPACE} -v ${HOST_WORKSPACE}:${CONTAINER_WORKSPACE} ${IMAGE}
 
 console:
-	docker run --rm -v ${HOST_WORKSPACE}:${CONTAINER_WORKSPACE} --rm -it --entrypoint=/bin/sh ${IMAGE}
+	docker run --rm --user $(shell id -u):$(shell id -g) -w ${CONTAINER_WORKSPACE} -v ${HOST_WORKSPACE}:${CONTAINER_WORKSPACE} -it --entrypoint=/bin/sh ${IMAGE}
 
 version:
 	@sed -i -e "s/^VERSION\=.*/VERSION=${VERSION}/" Makefile

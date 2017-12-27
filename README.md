@@ -1,6 +1,6 @@
 # Docker SonarQube Scanner
 
-[The SonarQube Scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) is recommended as the default launcher to analyze a project with SonarQube.
+[The SonarQube Scanner](http://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) is recommended as the default launcher to analyse a project with SonarQube.
 
 ## Prerequisite
 
@@ -16,4 +16,10 @@ sonar.projectDescription=Project Description
 
 ## Run
 
-`docker run --user $(id -u):$(id -g) -v $(pwd):/data localgod/docker-sonarqube-scanner:3.0.3.778 <parameters_if_required>`
+By default `https://sonarcloud.io` is assumed to be the server to connect to.
+
+    docker run --rm --user $(id -u):$(id -g) -w /data -v $(pwd):/data localgod/docker-sonarqube-scanner:3.0.3.778 <parameters_if_required>
+
+You can override this by providing the server name as a environment variable:
+
+    docker run --rm --user $(id -u):$(id -g) -e "SONAR_HOST=http://localhost:9000" -w /data -v $(pwd):/data localgod/docker-sonarqube-scanner:3.0.3.778 <parameters_if_required>

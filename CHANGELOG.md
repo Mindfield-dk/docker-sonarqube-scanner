@@ -7,6 +7,12 @@ This project adheres to [Keep a CHANGELOG](http://keepachangelog.com/)
 
 ## [Unreleased]
 
+## [1.0.1] - 2017-12-27
+
+### Fixed
+
+- Working dir and server is set on run
+
 ## [1.0.0] - 2017-10-25
 
 ### Added
