@@ -1,6 +1,6 @@
 # Docker SonarQube Scanner
 
-Copyright (c) 2017, Johannes Skov Frandsen
+Copyright (c) 2018, Johannes Skov Frandsen
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

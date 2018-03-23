@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 LABEL MAINTAINER="https://github.com/localgod/docker-sonarqube-scanner"
 
-ENV VERSION                    3.0.3.778
+ENV VERSION                    3.1.0.1141
 ENV OS                         linux
 ENV SONAR_SCANNER_WORKING_DIR  /data
 ENV SONAR_SCANNER_INSTALL_DIR  /opt/sonar-scanner

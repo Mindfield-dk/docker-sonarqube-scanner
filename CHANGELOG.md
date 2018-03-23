@@ -7,6 +7,12 @@ This project adheres to [Keep a CHANGELOG](http://keepachangelog.com/)
 
 ## [Unreleased]
 
+## [1.1.0] - 2018-03-23
+
+### Updated
+
+- SonarQube Scanner version 3.1.0.1141
+
 ## [1.0.1] - 2017-12-27
 
 ### Fixed
