@@ -18,11 +18,11 @@ A `sonar-project.properties` (or it's equivalent in dynamic configuration) is re
 
 By default `https://sonarcloud.io` is assumed to be the server to connect to.
 
-    docker run --rm --user $(id -u):$(id -g) -w /data -v $(pwd):/data localgod/docker-sonarqube-scanner:1.1.0 -Dsonar.login=08b0d2062d8e20008c92d29f314ab5bea728448e <more_parameters_if_required>
+    docker run --rm --user $(id -u):$(id -g) -w /data -v $(pwd):/data localgod/docker-sonarqube-scanner:1.1.1 -Dsonar.login=08b0d2062d8e20008c92d29f314ab5bea728448e <more_parameters_if_required>
 
 You can override this by providing the server name as an environment variable:
 
-    docker run --rm --user $(id -u):$(id -g) -e "SONAR_HOST=http://localhost:9000" -w /data -v $(pwd):/data localgod/docker-sonarqube-scanner:1.1.0 <parameters_if_required>
+    docker run --rm --user $(id -u):$(id -g) -e "SONAR_HOST=http://localhost:9000" -w /data -v $(pwd):/data localgod/docker-sonarqube-scanner:1.1.1 <parameters_if_required>
 
 
 ## License
