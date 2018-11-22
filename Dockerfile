@@ -14,7 +14,7 @@ ENV SONAR_HOST                 https://sonarcloud.io
 
 RUN adduser -D ${SONAR_USER} \
     && apk update \
-    && apk add --no-cache curl unzip \
+    && apk add --no-cache curl unzip nodejs \
     && mkdir -p ${SONAR_SCANNER_INSTALL_DIR} \
     && curl -L --silent ${SONAR_SCANNER_DOWNLOAD_URL} -o ${SONAR_SCANNER_ZIP} \
     && unzip -q ${SONAR_SCANNER_ZIP} -d /tmp \
