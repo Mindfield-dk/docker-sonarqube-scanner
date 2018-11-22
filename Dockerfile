@@ -6,7 +6,7 @@ ENV OS                         linux
 ENV SONAR_SCANNER_WORKING_DIR  /data
 ENV SONAR_SCANNER_INSTALL_DIR  /opt/sonar-scanner
 ENV SONAR_SCANNER_BIN_DIR      ${SONAR_SCANNER_INSTALL_DIR}/bin
-ENV SONAR_SCANNER_DOWNLOAD_URL https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${VERSION}-${OS}.zip
+ENV SONAR_SCANNER_DOWNLOAD_URL https://binaries.sonarsource.com//Distribution/sonar-scanner-cli/sonar-scanner-cli-${VERSION}-${OS}.zip
 ENV SONAR_SCANNER_ZIP          /tmp/sonar-scanner-cli-${VERSION}.zip
 ENV SONAR_SCANNER_FOLDER       sonar-scanner-${VERSION}-${OS}
 ENV SONAR_USER                 sonar
@@ -14,7 +14,7 @@ ENV SONAR_HOST                 https://sonarcloud.io
 
 RUN adduser -D ${SONAR_USER} \
     && apk update \
-    && apk add --no-cache curl unzip \
+    && apk add --no-cache curl unzip nodejs \
     && mkdir -p ${SONAR_SCANNER_INSTALL_DIR} \
     && curl -L --silent ${SONAR_SCANNER_DOWNLOAD_URL} -o ${SONAR_SCANNER_ZIP} \
     && unzip -q ${SONAR_SCANNER_ZIP} -d /tmp \
