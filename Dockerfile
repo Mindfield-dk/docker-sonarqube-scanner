@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine
-LABEL MAINTAINER="https://github.com/localgod/docker-sonarqube-scanner"
+LABEL MAINTAINER="https://github.com/mindfield/docker-sonarqube-scanner"
 
 ENV VERSION                    3.2.0.1227
 ENV OS                         linux
