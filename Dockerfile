@@ -1,7 +1,23 @@
 FROM openjdk:8-jre-alpine
-LABEL MAINTAINER="https://github.com/mindfield/docker-sonarqube-scanner"
 
-ENV VERSION                    3.2.0.1227
+ARG BUILD_DATE=""
+ARG VCS_REF="latest"
+ARG VERSION="latest"
+
+LABEL maintainer="https://github.com/mindfield/docker-sonarqube-scanner" \
+      org.label-schema.schema-version="1.0" \
+      org.label-schema.vendor="mindfield" \
+      org.label-schema.name="sonarqube" \
+      org.label-schema.license="MIT" \
+      org.label-schema.description="This is a dockerized sonar cli scanner" \
+      org.label-schema.vcs-url="https://github.com/mindfield/docker-sonarqube-scanner" \
+      org.label-schema.vcs-ref=${VCS_REF} \
+      org.label-schema.build-date=${BUILD_DATE} \
+      org.label-schema.version=${VERSION} \
+      org.label-schema.url="https://unknown" \
+      org.label-schema.usage="https://github.com/mindfield/docker-sonarqube-scanner#readme"
+
+ENV VERSION                    4.6.2.2472
 ENV OS                         linux
 ENV SONAR_SCANNER_WORKING_DIR  /data
 ENV SONAR_SCANNER_INSTALL_DIR  /opt/sonar-scanner
