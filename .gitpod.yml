@@ -1,0 +1,12 @@
+gitConfig:
+  alias.st: status
+tasks:
+  - name: Setup fnm (Fast node manager)
+    before: sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.12.0/hadolint-Linux-x86_64 && sudo chmod +x /bin/hadolint
+    init: |
+      make
+
+vscode:
+  extensions:
+    - DavidAnson.vscode-markdownlint
+    - exiasr.hadolint

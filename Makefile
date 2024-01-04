@@ -1,6 +1,6 @@
 HOST_WORKSPACE=${PWD}/
 CONTAINER_WORKSPACE=/data
-VERSION=1.1.2
+VERSION=1.1.4
 IMAGE=localgod/docker-sonarqube-scanner:${VERSION}
 
 .PHONY: login logout build push pull run console
