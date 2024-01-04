@@ -1,24 +1,18 @@
 HOST_WORKSPACE=${PWD}/
 CONTAINER_WORKSPACE=/data
-VERSION=1.1.4
-IMAGE=localgod/docker-sonarqube-scanner:${VERSION}
+ORG=localgod
+APP=docker-sonarqube-scanner
+VERSION=latest
+IMAGE=${ORG}/${APP}:${VERSION}
 
 .PHONY: login logout build push pull run console
 
-login:
-	@docker login -u ${REGISTRY_USER} -p ${REGISTRY_PASS}
-
-logout:
-	@docker logout ${REGISTRY}
-
 build:
-	docker build -t="${IMAGE}" .
-
-push:
-	docker push ${IMAGE}
-
-pull:
-	docker pull ${IMAGE}
+	@docker build \
+	--build-arg BUILD_DATE=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ') \
+	--build-arg VCS_REF=$(shell git rev-parse HEAD) \
+	--build-arg VERSION=$(shell cat VERSION) \
+	-t ${IMAGE} .
 
 run:
 	docker run \
