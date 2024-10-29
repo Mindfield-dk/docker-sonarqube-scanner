@@ -17,15 +17,15 @@ LABEL maintainer="https://github.com/mindfield/docker-sonarqube-scanner" \
       org.label-schema.url="https://unknown" \
       org.label-schema.usage="https://github.com/mindfield/docker-sonarqube-scanner#readme"
 
-ENV VERSION                    5.0.1.3006
+ENV VERSION                    6.2.1.4610
 ENV OS                         linux
 ENV SONAR_SCANNER_WORKING_DIR  /data
 ENV SONAR_SCANNER_INSTALL_DIR  /opt/sonar-scanner
 ENV SONAR_SCANNER_BIN_DIR      ${SONAR_SCANNER_INSTALL_DIR}/bin
-ENV SONAR_SCANNER_DOWNLOAD_URL https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${VERSION}-${OS}.zip
+ENV SONAR_SCANNER_DOWNLOAD_URL https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${VERSION}-${OS}-x64.zip
                                
 ENV SONAR_SCANNER_ZIP          /tmp/sonar-scanner-cli-${VERSION}.zip
-ENV SONAR_SCANNER_FOLDER       sonar-scanner-${VERSION}-${OS}
+ENV SONAR_SCANNER_FOLDER       sonar-scanner-${VERSION}-${OS}-x64
 ENV SONAR_USER                 sonar
 ENV SONAR_HOST                 https://sonarcloud.io
 

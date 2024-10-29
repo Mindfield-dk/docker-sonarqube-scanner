@@ -8,6 +8,13 @@ This project adheres to [Keep a CHANGELOG](http://keepachangelog.com/)
 
 ## [Unreleased]
 
+## [1.1.5] - 2024-10-11
+
+### Updated
+
+- SonarQube Scanner version 6.2.1.4610
+- Base image swithed to `eclipse-temurin:8-jdk-alpine`
+
 ## [1.1.4] - 2024-01-04
 
 ### Updated
