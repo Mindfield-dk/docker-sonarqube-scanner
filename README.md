@@ -4,6 +4,10 @@
 
 [The SonarQube Scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) is recommended as the default launcher to analyse a project with SonarQube.
 
+## Official image
+
+There is now an official docker image provided by SonarQube. You can get it [here](https://hub.docker.com/r/sonarsource/sonar-scanner-cli).
+
 ## Prerequisite
 
 A `sonar-project.properties` (or it's equivalent in dynamic configuration) is required in the root of you project with as a minimum the following values:
