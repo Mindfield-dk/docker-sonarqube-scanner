@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8:alpine-jre
+FROM eclipse-temurin:8-jdk-alpine
 
 ARG BUILD_DATE=""
 ARG VCS_REF="latest"
