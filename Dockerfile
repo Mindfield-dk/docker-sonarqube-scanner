@@ -29,9 +29,13 @@ ENV SONAR_SCANNER_FOLDER       sonar-scanner-${VERSION}-${OS}
 ENV SONAR_USER                 sonar
 ENV SONAR_HOST                 https://sonarcloud.io
 
+ARG CURL_VERSION=8.10.1-r0
+ARG UNZIP_VERSION=6.0-r14
+ARG NODEJS_VERSION=20.15.1-r0
+
 RUN adduser -D ${SONAR_USER} \
 && apk update \
-&& apk add --no-cache curl unzip nodejs \
+&& apk add --no-cache curl=${CURL_VERSION} unzip=${UNZIP_VERSION} nodejs=${NODEJS_VERSION} \
 && mkdir -p ${SONAR_SCANNER_INSTALL_DIR} \
 && curl -L --silent ${SONAR_SCANNER_DOWNLOAD_URL} -o ${SONAR_SCANNER_ZIP} \
 && unzip ${SONAR_SCANNER_ZIP} -d /tmp \
