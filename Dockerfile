@@ -1,4 +1,4 @@
-FROM eclipse-temurin:8-jdk-alpine
+FROM eclipse-temurin:21-jdk-alpine
 
 ARG BUILD_DATE=""
 ARG VCS_REF="latest"
